@@ -1,0 +1,704 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.banner{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(38, 38, 39, 0.644), rgba(38, 38, 39, 0.644)),url(images/bannerdefinitivo.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    justify-content: space-between;
+}
+.banner2{
+    height: 500px;
+    width: 55%;
+    background-image: url(images/brasil.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    margin-top: -2%;
+    border-radius: 3%;
+}
+.banner3{
+    height: 500px;
+    width: 55%;
+    background-image: url(images/caixa.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    margin-top: -2%;
+    border-radius: 3%;
+}
+.containertxt{
+    justify-content: center;
+    text-align: center;
+}
+.linhaC{
+    margin-top: 5%;
+    margin-left: 4%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.banner h2{
+    font-size: 100px;
+    color: #fff;
+}
+header .logo{
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 3px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    padding: 23px 5px;
+    background-color: rgba(11, 36, 74, 0.6);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    z-index: 100000;
+    transition: 0.8s;
+}
+header.sticky{
+    background-color: rgb(255, 255, 255, 0.6);
+    padding: 0px 5px;
+    backdrop-filter: blur(8px);
+}
+header.sticky .logo{
+    opacity: 0.9;
+    color: #0b244a;
+}
+header.sticky ul li a{
+    opacity: 0.9;
+    color: #0b244a;
+}
+nav{
+    display: flex;
+    padding: .7% .7%;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #105cce;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+        width: 100%;
+}
+.texto{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    text-align: center;
+}
+.acimat{
+    font-weight: bold;
+    font-size: 20px;
+    color: #e2e2e2;
+    margin-bottom: -2%;
+}
+.linhabotoes{
+    display: flex;
+    justify-content: center;
+}
+.espaco{
+    width: 50px;
+    height: 20px;
+}
+nav .fa-bars{
+    display: none;
+}
+nav .fa-xmark{
+    display: none;
+}
+
+/*produtos*/
+
+.produtos{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    background-color: #181c1c;
+}
+.linhaP{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+.colunaP{
+    flex: 1;
+    margin: 0 2%;    
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    transition: 1s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.colunaP img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(60%);
+    display: block;
+    transition: 0.3s;
+}
+.colunaP:hover img{
+    filter: grayscale(0%);
+}
+.colunaP:hover {
+    transform:scale(1.04);
+}
+.colunaP:hover { flex: 1 1 2%; }
+.colunaP:hover > img {
+  width: 100%;
+  height: 100%;
+}
+.colunaP > img{
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover; 
+    transition: .5s;
+}
+.camada a{
+    width: 40%;
+    font-weight: 300;
+    color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    font-size: 40px;
+    transition: 0.5s;
+}
+.camada:hover a{
+    bottom: 40%;
+    opacity: 1;
+}
+h1{
+    text-align: center;
+    font-weight: 600;
+    margin: 0 0; 
+    font-size: 80px;
+    color: black;
+}
+h4{
+    text-align: center;
+    font-weight: 600;
+    margin: 0 0; 
+    font-size: 20px;
+    opacity: 0.7;
+}
+.camada{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+p{
+    opacity: 0.7;
+}
+
+.reviewc{
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+    text-align: center;
+    margin-top: 10%;
+}
+.reviews:hover{
+    transform:scale(1.1);
+}
+.reviews{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 0%;
+    text-align: left;
+    background: #e2e2e2;
+    padding: 30px;
+    cursor: pointer;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+.reviews img{
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.reviews h3{
+    text-align: left;
+    margin-top: 15px;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+    background-color: #181c1c;
+    word-break: normal;
+    color: white;
+    display: block;
+}
+.footerb{
+    width: 100%;
+    height: fit-content;
+    text-align: left;
+    background-color: rgb(10, 10, 10);
+    word-break: normal;
+    color: white;
+}
+.icones .fa-brands{
+    color: #fff;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    font-size: 25px;
+    transition: 0.1s;
+}
+.icones .fa-brands:hover{
+    color: #105cce;
+    transition: 0.1s;
+}
+.textofinal{
+    width: 100%;
+    text-align: center;
+}
+.titulolegal{
+    text-align: center;
+    font-weight: 600;
+    font-size: 80px;
+    margin-left: 2%;
+    margin-top: 3%;
+}
+h5{
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 2%;
+    opacity: 0.7;
+    margin-bottom: 4%;
+}
+.containertxt a{
+    justify-content: center;
+    text-decoration: none;
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.1em;
+    padding: 1em 2em;
+}
+.containertxt a:hover, .containertxt a:focus{
+    border-color: var(--hover);
+    color: #fff;
+}
+.containertxt a{
+    color: var(--color);
+    transition: 0.25s;
+}
+.offset{
+    box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+.offset:hover, .offset:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+.offset{
+    --color: #0b244a;
+    --hover: #105cce;
+}
+
+.but-comprar:before, .but-comprar:after{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.but-comprar:before{
+    transform: translate3d(-100%, 0, 0);
+    background-color: #96bcf5;
+    border: 1px solid #96bcf5;
+    transition: transform 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.but-comprar:after{
+    background-color: #0b244a;
+    border: 1px solid #0b244a;
+    transform: translate3d(100%, 0, 0);
+    transition: transform 300ms 300ms cubic-bezier(0.16, 0.73, 0.58, 0.62);
+}
+.but-comprar:hover:before{
+    transform: translate3d(0, 0, 0);
+}
+.but-comprar:hover:after{
+    transform: translate3d(0, 0, 0);
+}
+.but-comprar{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 20px 80px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+span{
+position: relative;
+z-index: 100;
+}
+.linhaF{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.colunaF{
+    width: 25%;
+    padding: 0;
+}
+.colunaF h4{
+    font-size: 22px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+ul{
+    list-style: none;
+}
+.colunaF ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.colunaF ul li a{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: 0.2s;
+}
+.colunaF ul li a:hover{
+    color: #0066ff;
+    padding-left: 10px;
+    transition: 0.2s;
+}
+.linhaF a{
+    opacity: 0.7;
+    font-size: 13px;
+    cursor: pointer;
+}
+.linhaF a:hover{
+    opacity: 0.9;
+}
+
+
+.bannerPaisagem{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(38, 38, 39, 0.644), rgba(38, 38, 39, 0.144)),url(images/paisagem.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    justify-content: space-between;
+}
+.tituloambiente{
+    font-weight: bold;
+    font-size: 90px;
+    color: #e2e2e2;
+    margin-bottom: -2%;
+}
+.underline{
+    text-decoration: underline;
+    text-decoration-color: #7ce866 ;
+}
+.ambienteB{
+    display: flex;
+    padding: .7% .7%;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+}
+.barra2.sticky{
+    background-color: rgb(99,157,203, 0.4);
+    padding: 0px 5px;
+    backdrop-filter: blur(10px);
+}
+.barra2.sticky .logoA{
+    opacity: 0.9;
+    color: #04cc54;
+}
+.barra2.sticky ul li a{
+    opacity: 0.9;
+    color: #04cc54;
+}
+.nav-linksA{
+    flex: 1;
+    text-align: center;
+}
+.nav-linksA ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-linksA ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-linksA ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #6be653;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-linksA ul li:hover::after{
+        width: 100%;
+}
+header .logoA{
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 3px;
+}
+.barra2{
+    position: fixed;
+    width: 100%;
+    padding: 23px 5px;
+    background-color: rgba(152, 251, 152, 0.4);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    z-index: 100000;
+    transition: 0.8s;
+}
+.espacoA{
+    height: 80px;
+}
+.colunaar{
+    width: 100px;
+}
+.banner2A{
+    height: 500px;
+    width: 55%;
+    background-image: url(images/paisagem2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    margin-top: -2%;
+    border-radius: 3%;
+}
+.banner3A{
+    height: 500px;
+    width: 55%;
+    background-image: url(images/paisagem3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    margin-top: -2%;
+    border-radius: 3%;
+}
+.linhaCambiente{
+    margin-top: 5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.txtamb{
+    font-size: 50px;
+    color: white;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: black;
+    justify-content: left;
+}
+.subtxtamb{
+    font-size: 20px;
+    color: white;
+    opacity: 1;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: black;
+    justify-content: left;
+}
+.banneroceano{
+    height: 1000px;
+    width: 100%;
+    background-image: linear-gradient(rgba(38, 38, 39, 0.644), rgba(38, 38, 39, 0.744)),url(images/oceano.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    justify-content: space-between;
+    opacity: 0.8;
+}
+.espacotxtparceria{
+        width: 90%;
+        color: #fff;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-30%);
+        text-align: center;
+}
+.txtambO{
+    font-size: 80px;
+    color: white;
+    justify-content: left;
+}
+.caixaOce{
+    flex-basis: 44%;
+    height: fit-content;
+    border-radius: 10px;
+    margin-bottom: 0%;
+    text-align: left;
+    background: #181c1c;
+    padding: 10px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    background-image: linear-gradient(rgba(38, 38, 39, 0.644), rgba(38, 38, 39, 0.544)),url(images/OceanC.jpg);
+}
+.oceanotxt{
+    font-size: 30px;
+    color: white;
+    opacity: 1;
+    margin-left: 4%;
+}
+.colunaO{
+    width: 50%;
+    padding: 0;
+}
+.tituloO{
+    font-size: 25px;
+    color: white;
+    opacity: 1;
+    text-align: left;
+    padding: 1%;
+    margin-left: 4%;
+}
+.botaosaber{
+    margin-left: 4%;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.botaosaber:hover{
+    color: white;
+    background-color: black;
+}
+.plano{
+    font-size: 90px;
+    color: black;
+}
+.plano2{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+.bannerfrase{
+    height: fit-content;
+    width: 100%;
+    background-color: #bbbbbb;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    justify-content: space-between;
+    opacity: 0.8;
+}
+.tituloCamp{
+    font-size: 90px;
+    color: black;
+    opacity: 1;
+    text-align: center;
+    padding: 1%;
+}
+.subtituloCamp{
+    font-size: 30px;
+    color: black;
+    opacity: 1;
+    text-align: center;
+    padding: 1%;
+}
+.linhaultimo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.caixaenergia{
+    height: 650px;
+    width: 500px;
+    background-color: #f8f4f4;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5%;
+}
+.txtE{
+    font-size: 60px;
+    color: black;
+    opacity: 1;
+    text-align: center;
+    padding-top: 30%;
+    text-decoration: underline;
+    text-decoration-color: #04cc54;
+}
