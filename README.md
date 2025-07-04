@@ -22,10 +22,19 @@ Prysm blends modern web design with environmental responsibility. Users can expl
 - AOS (Animate On Scroll) – Smooth visual animations
 - Font Awesome & Google Fonts – Icons and typography enhancements
 
-## File Structure
-/Prysm
-│
-├── Prysm.html # Main landing page
-├── ambiente.html # Environmental campaign page
-├── style.css # Central stylesheet
-└── /images # Visual assets
+## Getting Started
+
+To run the project locally:
+
+1. Clone this repository
+2. Open `Prysm.html` in your browser
+3. Make sure all assets and image paths are correctly referenced
+
+## Credits
+
+- Design and Development by Renan Rodrigues
+- Concept inspired by sustainable practices in the tech industry
+
+---
+
+© 2022 Prysm Inc. All rights reserved.
